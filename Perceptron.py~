@@ -1,7 +1,0 @@
-import numpy as np
-class Perceptron(object):
-
-    eta : float
-    n_iter : int
-    ramdom_state : int
-    
