@@ -1,6 +1,8 @@
-def preprocess(example, size=(64, 64), model='train'):
+import tensorflow as tf
+
+def preprocess(example, size=(64, 64), mode='train'):
     image = example['image']
-    label = example['attribute']['Male']
+    label = example['attributes']['Male']
     if mode == 'train':
         image_cropped = tf.image.random_crop(image, size=(178, 178, 3))
         image_resized = tf.image.resize(image_cropped, size=size)
